@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Week3_HW2_Functions</title>
+    <style>
+      * {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <!--EXERCISE 1-->
+    <form id="max-of-three" onsubmit="event.preventDefault(); findMax();">
+      <h2>Exercise 1 <a href="https://github.com/hgarciasoftware/per-scholas-modules/blob/master/javascript-cs-concepts/functions/Week3_HW2_Functions.html#L59-L67" target="_blank">(see code)</a></h2>
+      <input name="value-1" type="number" required>
+      <input name="value-2" type="number" required>
+      <input name="value-3" type="number" required>
+      <button>find max</button>
+      <output name="max"></output>
+    </form>
+    <!--EXERCISE 2a-->
+    <form id="celsius-to-fahrenheit" onsubmit="event.preventDefault(); convertToF();">
+      <h2>Exercise 2a <a href="https://github.com/hgarciasoftware/per-scholas-modules/blob/master/javascript-cs-concepts/functions/Week3_HW2_Functions.html#L68-L72" target="_blank">(see code)</a></h2>
+      <input name="celsius" type="number" required>
+      <button>convert to F</button>
+      <output name="fahrenheit"></output>
+    </form>
+    <!--EXERCISE 2b-->
+    <form id="fahrenheit-to-celsius" onsubmit="event.preventDefault(); convertToC();">
+      <h2>Exercise 2b <a href="https://github.com/hgarciasoftware/per-scholas-modules/blob/master/javascript-cs-concepts/functions/Week3_HW2_Functions.html#L73-L77" target="_blank">(see code)</a></h2>
+      <input name="fahrenheit" type="number" required>
+      <button>convert to C</button>
+      <output name="celsius"></output>
+    </form>
+    <!--EXERCISE 3-->
+    <form id="filter-students" onsubmit="event.preventDefault(); filterStudents();">
+      <h2>Exercise 3 <a href="https://github.com/hgarciasoftware/per-scholas-modules/blob/master/javascript-cs-concepts/functions/Week3_HW2_Functions.html#L78-L83" target="_blank">(see code)</a></h2>
+      <pre id="students"></pre>
+      <input name="activity" required>
+      <button>filter</button>
+      <output name="filtered"></output>
+    </form>
+    <!--EXERCISE 4-->
+    <h2>Exercise 4 <a href="https://github.com/hgarciasoftware/per-scholas-modules/blob/master/javascript-cs-concepts/functions/Week3_HW2_Functions.html#L110-L114" target="_blank">(see code)</a></h2>
+    <pre id="array-map"></pre>
+    <!--JavaScript-->
+    <script>
+      // exercise 1
+      const maxOfThree = (a, b, c) => Math.max(a, b, c);
+
+      // exercise 2a
+      const celsiusToFahrenheit = celsius => (celsius * 9) / 5 + 32;
+
+      // exercise 2b
+      const fahrenheitToCelsius = fahrenheit => 5 * (fahrenheit - 32) / 9;
+
+      // event handlers
+      function findMax() {
+        const formElement = document.getElementById('max-of-three');
+
+        const max1 = formElement['value-1'].value;
+        const max2 = formElement['value-2'].value;
+        const max3 = formElement['value-3'].value;
+
+        formElement['max'].textContent = maxOfThree(max1, max2, max3);
+      }
+      function convertToF() {
+        const formElement = document.getElementById('celsius-to-fahrenheit');
+        const celsius = Number(formElement.celsius.value);
+        formElement.fahrenheit.textContent = prettyPrintNumber(celsiusToFahrenheit(celsius));
+      }
+      function convertToC() {
+        const formElement = document.getElementById('fahrenheit-to-celsius');
+        const fahrenheit = Number(formElement.fahrenheit.value);
+        formElement.celsius.textContent = prettyPrintNumber(fahrenheitToCelsius(fahrenheit));
+      }
+      function filterStudents() {
+        const formElement = document.getElementById('filter-students');
+        const activity = formElement.activity.value || 'Swimming';
+        const filtered = students.filter(student => student.activity === activity);
+        formElement.filtered.innerHTML = `<pre>${prettyPrintObject(filtered)}</pre>`;
+      }
+
+      // helper functions
+      function studentFactory(name, activity, gender) {
+        return {name, activity, gender};
+      }
+      function prettyPrintNumber(number) {
+        return number.toString().match(/^-?\d+\.?\d{0,2}/)[0];
+      }
+      function prettyPrintObject(object) {
+        return JSON.stringify(object, null, 2);
+      }
+
+      // exercise 3
+      const students = [
+        studentFactory('Alice', 'Swimming', 'Female'),
+        studentFactory('Bob', 'Swimming', 'Male'),
+        studentFactory('Carol', 'Archery', 'Female'),
+        studentFactory('Dave', 'Robotics', 'Male'),
+        studentFactory('Eve', 'Swimming', 'Female')
+      ];
+
+      document.getElementById('students').textContent = prettyPrintObject(students);
+
+      filterStudents();
+
+      // exercise 4
+      let array = ['A', 'B', 'C'];
+
+      array = array.map((value, index) => ({value, index}));
+
+      document.getElementById('array-map').textContent = prettyPrintObject(array);
+    </script>
+  </body>
+</html>
