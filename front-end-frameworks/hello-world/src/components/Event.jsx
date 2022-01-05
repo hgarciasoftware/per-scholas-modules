@@ -2,16 +2,11 @@
 // Functional and/or class based components
 
 // define our Event Component
-function Event() {
+function Event(props) {
   // return some UI
   return (
     <>
-      <h2>Favorite Foods</h2>
-      <ul>
-        <li>Pierogi</li>
-        <li>Steak</li>
-        <li>Tacos</li>
-      </ul>
+      <h2>{props.title}</h2>
     </>
   );
 }
