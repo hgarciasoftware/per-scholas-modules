@@ -1,9 +1,10 @@
 
-function Product() {
+function Product(props) {
   return (
     <div>
-      <h1>Product Title</h1>
-      <h3>Product Description</h3>
+      <img src={props.image} alt={props.title} />
+      <h1>{props.title}</h1>
+      <h3>{props.description}</h3>
     </div>
   );
 }
