@@ -5,14 +5,14 @@
 function Event() {
   // return some UI
   return (
-    <div>
+    <>
       <h2>Favorite Foods</h2>
       <ul>
         <li>Pierogi</li>
         <li>Steak</li>
         <li>Tacos</li>
       </ul>
-    </div>
+    </>
   );
 }
 
