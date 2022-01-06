@@ -1,0 +1,43 @@
+body {
+  border: 1rem solid #381c47;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+img {
+  max-width: 399px;
+}
+
+.header,
+.item {
+  border-bottom: 0.125rem solid green;
+}
+
+.item {
+  margin: 0 auto;
+  max-width: 32rem;
+  padding-top: 2rem;
+}
+
+h1, h2, h3, p {
+  background: linear-gradient(90deg, rgba(154,195,125,1) 0%, rgba(208,239,103,1) 100%);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+
+h1 {
+  font-size: 4.209rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+p {
+  font-size: 1.333rem;
+}

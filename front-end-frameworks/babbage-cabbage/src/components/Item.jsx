@@ -1,9 +1,9 @@
 function Item(props) {
   return (
-    <div>
+    <div className="item">
+      <img src={props.image} alt={props.name} />
       <p>{props.name}</p>
       <p>{props.discountedPrice}</p>
-      <img src={props.image} alt={props.name} />
     </div>
   );
 }

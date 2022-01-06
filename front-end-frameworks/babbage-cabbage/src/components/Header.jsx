@@ -1,10 +1,10 @@
 function Header(props) {
   return (
-    <div>
+    <div className="header">
       <h1>{props.companyName}</h1>
+      <img src={props.image} alt={props.eventName} />
       <h2>{props.eventName}</h2>
       <h3>{props.eventDate}</h3>
-      <img src={props.image} alt={props.eventName} />
     </div>
   );
 }
