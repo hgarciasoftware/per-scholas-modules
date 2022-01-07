@@ -8,6 +8,13 @@ img {
   max-width: 399px;
 }
 
+.header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 0.125rem);
+}
+
 .header,
 .item {
   border-bottom: 0.125rem solid green;
@@ -26,18 +33,26 @@ h1, h2, h3, p {
   -webkit-text-fill-color: transparent
 }
 
+@media print {
+  h1, h2, h3, p {
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial
+  }
+}
+
 h1 {
-  font-size: 4.209rem;
+  font-size: 3.052rem;
 }
 
 h2 {
-  font-size: 3.157rem;
+  font-size: 2.441rem;
 }
 
 h3 {
-  font-size: 2.369rem;
+  font-size: 1.953rem;
 }
 
 p {
-  font-size: 1.333rem;
+  font-size: 1.25rem;
 }
