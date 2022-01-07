@@ -1,0 +1,10 @@
+.App {
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+.component {
+  border: 1px solid grey;
+  margin: 5px;
+  padding: 5px;
+}

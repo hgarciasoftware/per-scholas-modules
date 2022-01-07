@@ -1,8 +1,11 @@
 import './App.css';
+import FloorPlan from './components/FloorPlan';
 
 function App() {
   return (
-    <div className="App"></div>
+    <div className="App">
+      <FloorPlan />
+    </div>
   );
 }
 
