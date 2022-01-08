@@ -5,15 +5,15 @@ import Bath from './Bath';
 
 function FloorPlan() {
   return (
-    <div className="component floor-plan">
+    <main className="floor-plan">
       <Bedroom bedNum="1" />
       <Kitchen />
-      <Bath size="Full" />
+      <Bath size="full" />
       <Bedroom bedNum="2" />
       <LivingRoom />
-      <Bath size="Half" />
+      <Bath size="half" />
       <Bedroom bedNum="3" />
-    </div>
+    </main>
   );
 }
 

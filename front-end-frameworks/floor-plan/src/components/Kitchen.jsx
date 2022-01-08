@@ -3,11 +3,11 @@ import Sink from './Sink';
 
 function Kitchen() {
   return (
-    <div className="component kitchen">
-      Kitchen
+    <figure className="room kitchen">
+      <figcaption className="room-caption">Kitchen</figcaption>
       <Oven />
       <Sink />
-    </div>
+    </figure>
   );
 }
 

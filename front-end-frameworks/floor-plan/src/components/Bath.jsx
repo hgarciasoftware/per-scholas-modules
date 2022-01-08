@@ -1,6 +1,8 @@
 function Bath(props) {
   return (
-    <div className="component bath">{props.size} Bath</div>
+    <figure className={`room ${props.size}-bath`}>
+      <figcaption className="room-caption">{props.size} Bath</figcaption>
+    </figure>
   );
 }
 

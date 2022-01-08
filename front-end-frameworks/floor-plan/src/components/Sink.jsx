@@ -1,6 +1,8 @@
 function Sink(props) {
   return (
-    <div className="component sink">Sink</div>
+    <figure className="room sink">
+      <figcaption className="room-caption">Sink</figcaption>
+    </figure>
   );
 }
 

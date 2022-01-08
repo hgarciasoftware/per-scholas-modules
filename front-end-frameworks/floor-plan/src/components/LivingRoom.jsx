@@ -1,6 +1,8 @@
 function LivingRoom() {
   return (
-    <div className="component living-room">Living Room</div>
+    <figure className="room living-room">
+      <figcaption className="room-caption">Living Room</figcaption>
+    </figure>
   );
 }
 

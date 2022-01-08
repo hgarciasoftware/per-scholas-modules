@@ -1,6 +1,8 @@
 function Oven(props) {
   return (
-    <div className="component oven">Oven</div>
+    <figure className="room oven">
+      <figcaption className="room-caption">Oven</figcaption>
+    </figure>
   );
 }
 
