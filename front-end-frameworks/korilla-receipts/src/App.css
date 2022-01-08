@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 71.25rem;
+  padding: 1.5rem .75rem;
+}
+
+.App-title {
+  margin-bottom: 3.75rem;
+  margin-top: 0;
+  font-size: 2.488rem;
+}
+
+.receipt-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 0 1.125rem;
+}
+
+.receipt {
+  flex: 1;
+  padding: 1.5rem;
+  border: .0625rem solid #ffae90;
+}
+
+.person {
+  margin: 2.25rem 2.25rem 2.25rem 0;
+  font-size: 2.074rem;
+  line-height: 1.3em;
+}
+
+.order {
+  padding: 0;
+  list-style: none;
+}
+
+.order-item {
+  margin: 2.25rem 0;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-purple {
+  color: #5b0082;
+}
