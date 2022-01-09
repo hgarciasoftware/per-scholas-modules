@@ -47,7 +47,6 @@ const receipt3 = {
   },
   paid: true
 };
-
 const receipts = [receipt1, receipt2, receipt3];
 
 function App() {
