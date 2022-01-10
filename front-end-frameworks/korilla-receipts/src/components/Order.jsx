@@ -11,8 +11,8 @@ function toString(val) {
 function Order(props) {
   return (
     <ul className="order text-bold">
-      {Object.entries(props.order).map(entry => {
-        return <OrderItem itemProp={entry[0]} itemVal={toString(entry[1])} />
+      {Object.entries(props.order).map(([prop, {val, key}]) => {
+        return <OrderItem itemProp={prop} itemVal={toString(val)} key={key} />
       })}
     </ul>
   );

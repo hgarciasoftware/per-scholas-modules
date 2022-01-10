@@ -2,6 +2,10 @@ import './App.css';
 import Header from './components/Header';
 import ReceiptList from './components/ReceiptList';
 
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
 const receipt1 = {
   person: 'Karolin',
   order: {
@@ -47,7 +51,20 @@ const receipt3 = {
   },
   paid: true
 };
-const receipts = [receipt1, receipt2, receipt3];
+
+let key = 0;
+
+const receipts = [receipt1, receipt2, receipt3].map(receipt => {
+  const r = {...deepClone(receipt), key: key++};
+
+  r.order = Object.entries(r.order).reduce((order, [prop, val]) => {
+    order[prop] = {val, key: key++};
+
+    return order;
+  }, {});
+
+  return r;
+});
 
 function App() {
   return (
