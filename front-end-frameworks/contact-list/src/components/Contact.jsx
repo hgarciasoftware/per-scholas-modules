@@ -1,5 +1,4 @@
 function Contact(props) {
-  
   return (
     <article className="contact">
       <img className="profile" src={props.contactInfo.picture.large} alt={props.contactInfo.name.first} loading="lazy" />
