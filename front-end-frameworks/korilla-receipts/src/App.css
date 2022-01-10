@@ -23,24 +23,22 @@
 }
 
 .receipt {
+  flex: 1;
   border: .0625rem solid #ffae90;
   margin: 1rem;
   max-width: 100%;
   padding: 1.5rem;
-  width: 100%;
 }
 
-@media (min-width: 43rem) {
+@media (min-width: 29.3125rem) {
   .receipt {
     max-width: calc(50% - 2rem);
-    width: calc(50% - 2rem);
   }
 }
 
-@media (min-width: 64.25rem) {
+@media (min-width: 43.25rem) {
   .receipt {
     max-width: calc(33.33333% - 2rem);
-    width: calc(33.33333% - 2rem);
   }
 }
 
