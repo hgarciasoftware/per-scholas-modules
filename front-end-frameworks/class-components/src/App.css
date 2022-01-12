@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: .0625rem solid #ccc;
+  padding: .25rem;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 33.75rem;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+.table-wrap:focus {
+  outline: .1em solid rgba(0, 0, 0, .1);
+}
+
+.text-right {
+  text-align: right;
+}
