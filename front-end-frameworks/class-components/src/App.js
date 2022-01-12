@@ -1,8 +1,10 @@
 import './App.css';
 // import Hello from './components/Hello';
 // import Wish from './components/Wish';
-import EmployeeTable from './components/EmployeeTable';
+// import EmployeeTable from './components/EmployeeTable';
+import Greeting from './components/Greeting';
 
+/*
 const employees = [
   {
     name: 'Garrick',
@@ -23,6 +25,7 @@ const employees = [
     key: '2'
   }
 ];
+*/
 
 function App() {
   return (
@@ -30,7 +33,8 @@ function App() {
       {/* <Hello name="Tom" /> */}
       {/* <Hello name="Jack" /> */}
       {/* <Wish /> */}
-      <EmployeeTable employees={employees} />
+      {/*<EmployeeTable employees={employees} /> */}
+      <Greeting name="Nick" />
     </div>
   );
 }
