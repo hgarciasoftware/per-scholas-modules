@@ -5,8 +5,8 @@ class DivTwo extends Component {
   render() {
     return (
       <div>
-        <DivThree tardis={this.props.tardis} onClick={this.props.onClick} />
-        <DivThree tardis={this.props.tardis} onClick={this.props.onClick} />
+        <DivThree tardis={this.props.tardis} />
+        <DivThree tardis={this.props.tardis} />
       </div>
     );
   }

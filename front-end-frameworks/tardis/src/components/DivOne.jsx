@@ -5,7 +5,7 @@ class DivOne extends Component {
   render() {
     return (
       <div>
-        <DivTwo tardis={this.props.tardis} onClick={this.props.onClick} />
+        <DivTwo tardis={this.props.tardis} />
       </div>
     );
   }

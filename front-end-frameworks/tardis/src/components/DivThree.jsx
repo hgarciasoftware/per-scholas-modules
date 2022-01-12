@@ -7,15 +7,31 @@ class DivThree extends Component {
     this.state = {
       tardis: props.tardis
     };
-    this.onClick = this.props.onClick.bind(this);
+    this.onClick = this.props.onClick;
+  }
+
+  changeIt(text) {
+    if (this.state.tardis.caps) {
+      this.setState({
+        tardis: {
+          name: text.toLowerCase(),
+          caps: false
+        }
+      });
+    } else {
+      this.setState({
+        tardis: {
+          name: text.toUpperCase(),
+          caps: true
+        }
+      });
+    }
   }
 
   render() {
-    const { tardis } = this.state;
-
     return (
       <div>
-        <h3 onClick={() => this.onClick(tardis.name)}>{tardis.name}</h3>
+        <h3 onClick={() => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>
       </div>
     );
   }
