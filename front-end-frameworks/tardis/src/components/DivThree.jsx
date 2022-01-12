@@ -7,7 +7,6 @@ class DivThree extends Component {
     this.state = {
       tardis: props.tardis
     };
-    this.onClick = this.props.onClick;
   }
 
   changeIt(text) {
