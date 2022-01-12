@@ -33,8 +33,6 @@ class App extends Component {
   }
 
   render() {
-    const { tardis } = this.state;
-
     return (
       <div className="App">
         <DivOne tardis={this.state.tardis} onClick={this.changeIt} />
