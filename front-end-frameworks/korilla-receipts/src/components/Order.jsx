@@ -1,19 +1,17 @@
 import OrderItem from './OrderItem';
 
-function toString(val) {
-  if (Array.isArray(val)) {
-    return val.join(', ');
-  }
-
-  return val;
-}
-
 function Order(props) {
+  const { order } = props;
+
   return (
     <ul className="order text-bold">
-      {Object.entries(props.order).map(([prop, {val, key}]) => {
-        return <OrderItem itemProp={prop} itemVal={toString(val)} key={key} />
-      })}
+      <OrderItem field="main" value={order.main} />
+      <OrderItem field="protein" value={order.protein} />
+      <OrderItem field="rice" value={order.rice} />
+      <OrderItem field="sauce" value={order.sauce} />
+      <OrderItem field="toppings" value={order.toppings.join(', ')} />
+      <OrderItem field="drink" value={order.drink} />
+      <OrderItem field="cost" value={order.cost} />
     </ul>
   );
 }

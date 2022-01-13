@@ -1,7 +1,7 @@
 function OrderItem(props) {
   return (
     <li className="order-item">
-      <span className="text-capitalize text-purple">{props.itemProp}:</span> {props.itemVal}
+      <span className="text-capitalize text-purple">{props.field}:</span> {props.value}
     </li>
   );
 }
