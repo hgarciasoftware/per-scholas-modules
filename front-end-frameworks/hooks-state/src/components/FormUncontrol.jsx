@@ -1,9 +1,9 @@
-import { createRef } from 'react';
+import { useRef } from 'react';
 
 function FormUncontrol() {
-  const userNameRef = createRef();
-  const passwordRef = createRef();
-  const emailRef = createRef();
+  const userNameRef = useRef();
+  const passwordRef = useRef();
+  const emailRef = useRef();
 
   const handleSubmit = event => {
     event.preventDefault();
