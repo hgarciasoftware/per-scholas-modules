@@ -27,17 +27,26 @@ class App extends Component {
     ]
   };
 
+  static clearForm(form) {
+    form.item.value = '';
+    form.units.value = '';
+    form.quantity.value = '';
+    form['is-purchased'].checked = false;
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
+    const form = event.target;
     const formData = {
-      item: event.target.item.value,
-      units: event.target.units.value,
-      quantity: event.target.quantity.value,
-      isPurchased: event.target['is-purchased'].checked
+      item: form.item.value,
+      units: form.units.value,
+      quantity: form.quantity.value,
+      isPurchased: form['is-purchased'].checked
     };
 
     this.setState({ groceries: [ ...this.state.groceries, formData ] });
+    App.clearForm(form);
   };
 
   render() {
@@ -47,8 +56,8 @@ class App extends Component {
           {this.state.groceries.map((groceryItem, index) => (
             <GroceryItem groceryItem={groceryItem} key={index} />
           ))}
-          <GroceryItemForm handleSubmit={this.handleSubmit} />
         </ul>
+        <GroceryItemForm handleSubmit={this.handleSubmit} />
       </div>
     );
   }
