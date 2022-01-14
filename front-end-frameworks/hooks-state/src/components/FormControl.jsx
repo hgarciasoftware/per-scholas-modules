@@ -1,12 +1,15 @@
 import { useState } from 'react';
 
 function FormControl() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+    email: '',
+    submitted: false
+  });
 
   const handleChange = event => {
+    /*
     if (event.target.id === 'username') {
 
       setUsername(event.target.value);
@@ -17,11 +20,16 @@ function FormControl() {
 
       setEmail(event.target.value);
     }
+    */
+
+    // Computed property name
+
+    setFormData({ ...formData, [event.target.id]: event.target.value });
   }
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(username, password, email, submitted)
+    console.log(formData);
   };
 
   return (
@@ -31,14 +39,14 @@ function FormControl() {
       <input
         id="username"
         onChange={handleChange}
-        value={username}
+        value={formData.username}
       />
 
       <label htmlFor="password">password:</label>
       <input
         id="password"
         onChange={handleChange}
-        value={password}
+        value={formData.password}
         type="password"
       />
 
@@ -46,7 +54,7 @@ function FormControl() {
       <input
         id="email"
         onChange={handleChange}
-        value={email}
+        value={formData.email}
         type="email"
       />
 
