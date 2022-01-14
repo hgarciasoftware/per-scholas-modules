@@ -27,8 +27,11 @@ class Form extends Component {
             <input type="text" name="username" id="username" />
           </div>
           {/* BUTTON--SUBMIT */}
-          <div className="field">
+          <div className="field" style={{display: 'flex', justifyContent: 'space-between'}}>
             <button className="button font-weight-bold" type="submit">Submit</button>
+            <button className="button font-weight-bold" type="button" onClick={() => this.props.toggleView()}>
+              See posts
+            </button>
           </div>
         </form>
       </div>

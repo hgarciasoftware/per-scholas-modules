@@ -22,11 +22,14 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { posts: [] };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      isBlogPostsVisible: false,
+      isFormVisible: true,
+      posts: []
+    };
   }
 
-  handleSubmit(event) {
+  handleSubmit = event => {
     event.preventDefault();
 
     const newPost = App.parseForm(event.target);
@@ -34,13 +37,24 @@ class App extends Component {
 
     this.setState({ posts });
     App.resetForm(event.target);
-  }
+  };
+
+  toggleView = () => {
+    this.setState({
+      isBlogPostsVisible: !this.state.isBlogPostsVisible,
+      isFormVisible: !this.state.isFormVisible
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <BlogPosts posts={this.state.posts} />
-        <Form handleSubmit={this.handleSubmit} />
+        {this.state.isBlogPostsVisible ? (
+          <BlogPosts posts={this.state.posts} toggleView={this.toggleView} />
+        ) : null}
+        {this.state.isFormVisible ? (
+          <Form handleSubmit={this.handleSubmit} toggleView={this.toggleView} />
+        ) : null}
       </div>
     );
   }

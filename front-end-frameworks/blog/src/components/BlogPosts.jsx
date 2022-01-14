@@ -9,6 +9,11 @@ class BlogPosts extends Component {
     return (
       <div className="box">
         {this.props.posts.length !== 0 ? posts : noPosts}
+        <div className="field">
+          <button className="button font-weight-bold" type="button" onClick={() => this.props.toggleView()}>
+            See form
+          </button>
+        </div>
       </div>
     );
   }
