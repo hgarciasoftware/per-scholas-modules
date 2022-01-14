@@ -3,21 +3,21 @@ import { Component } from 'react'
 class GroceryItemForm extends Component {
   render() {
     return (
-      <form style={{ alignItems: 'center', display: 'flex', columnGap: '1rem' }} onSubmit={event => this.props.handleSubmit(event)} noValidate>
-        <div>
-          <label style={{ display: 'block' }}>Item</label>
-          <input name="item" />
+      <form className="form" onSubmit={event => this.props.handleSubmit(event)} noValidate>
+        <div className="flex-grow-1">
+          <label>Item</label>
+          <input name="item" type="text" />
         </div>
         <div>
-          <label style={{ display: 'block' }}>Units</label>
-          <input name="units" />
+          <label>Units</label>
+          <input className="input-width-10" name="units" type="text" />
         </div>
         <div>
-          <label style={{ display: 'block' }}>Quantity</label>
-          <input name="quantity" type="number" />
+          <label>Quantity</label>
+          <input className="input-width-5" name="quantity" type="number" />
         </div>
-        <div>
-          <label style={{ display: 'block' }}>Is Purchased</label>
+        <div className="text-center">
+          <label>Is Purchased</label>
           <input name="is-purchased" type="checkbox" />
         </div>
         <button type="submit">Add Item</button>

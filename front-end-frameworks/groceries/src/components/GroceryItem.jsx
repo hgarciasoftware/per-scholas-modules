@@ -3,9 +3,9 @@ import { Component } from 'react'
 class GroceryItem extends Component {
   render() {
     const { item, quantity, units, isPurchased } = this.props.groceryItem;
-    const jsx = <li>{quantity} × {item} ({units})</li>;
+    const fragment = <>{quantity} × {item} ({units})</>;
 
-    return !isPurchased ? <>{jsx}</> : <s>{jsx}</s>;
+    return <li>{!isPurchased ? fragment : <s>{fragment}</s>}</li>;
   }
 }
 
