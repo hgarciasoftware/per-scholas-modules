@@ -20,6 +20,7 @@ https://codepen.io/collection/zxKYWk
 - [contact-list](./contact-list)
 - [tardis](./tardis)
 - [blog](./blog)
+- [starships](./starships)
 
 
 ### react homework
@@ -27,3 +28,4 @@ https://codepen.io/collection/zxKYWk
 - [floor-plan](./floor-plan)
 - [korilla-receipts](./korilla-receipts)
 - [groceries](./groceries)
+- [students](./students)
