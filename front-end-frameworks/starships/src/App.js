@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import swapi from './services/sw-api';
 import './App.css';
+import Header from './components/Header';
 import StarshipCard from './components/StarshipCard';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <main>
         {/* ?. is the optional chaining operator */}
         {starships.results?.map((starship, index) => {
