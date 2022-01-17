@@ -2,9 +2,10 @@ function Score(props) {
   const { date, score } = props.score;
 
   return (
-    <li>
-      <span>{date}</span> | <span>{score}</span>
-    </li>
+    <tr>
+      <td>{date}</td>
+      <td className="text-right">{score}</td>
+    </tr>
   );
 }
 

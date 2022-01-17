@@ -1,0 +1,25 @@
+body {
+  background-color: #c8e4ef;
+}
+
+.App {
+  margin: 0 auto 1.25rem;
+  max-width: 45rem;
+  padding: 1.25rem;
+}
+
+table {
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: .0625rem solid #333;
+  padding: .25rem;
+}
+
+.text-right {
+  text-align: right;
+}

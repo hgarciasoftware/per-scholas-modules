@@ -64,7 +64,7 @@ const students = [
 ];
 
 function App() {
-  const [studentData, setStudentData] = useState({students});
+  const [studentData] = useState({ students });
 
   return (
     <div className="App">
