@@ -7,16 +7,15 @@ import StarshipCard from './components/StarshipCard';
 function App() {
   const [starships, setStarships] = useState([]);
 
-  useEffect(async () => setStarships(await swapi.getAllStarships()), []);
+  useEffect(() => {
+    swapi.getAllStarships(setStarships);
+  }, []);
 
   return (
     <div className="App">
       <Header />
       <main>
-        {/* ?. is the optional chaining operator */}
-        {starships.results?.map((starship, index) => {
-          return <StarshipCard starship={starship} key={index} />;
-        })}
+        {starships.map((starship, index) => <StarshipCard starship={starship} key={index} />)}
       </main>
     </div>
   );

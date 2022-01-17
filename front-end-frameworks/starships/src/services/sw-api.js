@@ -1,10 +1,11 @@
-const swapiURL = 'https://swapi.dev/api/';
+const swapiURL = 'https://swapi.dev/api';
 
 const swapi = {
-  async getAllStarships() {
+  async getAllStarships(setStarships) {
     const response = await fetch(swapiURL + '/starships/');
+    const data = await response.json();
 
-    return response.json();
+    setStarships(data.results);
   }
 };
 
