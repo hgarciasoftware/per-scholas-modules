@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import swapi from './services/sw-api';
 import Header from './components/Header';
-import StarshipCard from './components/StarshipCard';
+import Starships from './components/Starships';
+import About from './components/About';
 
 function App() {
   const [starships, setStarships] = useState([]);
@@ -12,12 +14,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <main>
-        {starships.map((starship, index) => <StarshipCard starship={starship} key={index} />)}
-      </main>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Starships starships={starships} />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 

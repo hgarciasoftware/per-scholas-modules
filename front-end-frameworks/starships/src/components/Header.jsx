@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <header>
       <nav>
         <ul>
-          <li>HOME</li>
-          <li>STAR WARS STARSHIPS</li>
-          <li>ABOUT</li>
+          <Link to="/"><li>HOME</li></Link>
+          <Link to="/"><li>STAR WARS STARSHIPS</li></Link>
+          <Link to="/about"><li>ABOUT</li></Link>
         </ul>
       </nav>
     </header>

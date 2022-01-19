@@ -25,7 +25,7 @@ ul {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 0 1.125rem;
   list-style: none;
 }
 
@@ -33,6 +33,11 @@ ul {
   ul {
     flex-direction: column;
   }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 main {
@@ -52,4 +57,8 @@ article {
   width: 17.625rem;
   background-color: darkslategray;
   border-radius: .25rem;
+}
+
+p {
+  color: black;
 }
