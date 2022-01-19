@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import swapi from './services/sw-api';
 import './App.css';
+import swapi from './services/sw-api';
 import Header from './components/Header';
 import StarshipCard from './components/StarshipCard';
 

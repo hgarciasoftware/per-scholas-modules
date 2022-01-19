@@ -1,7 +1,5 @@
 .App {
-  margin: 0 auto;
   min-width: 19.875rem;
-  max-width: 82.5rem;
 }
 
 body {
@@ -17,10 +15,32 @@ header {
   background-color: #282c34;
 }
 
+@media (max-width: 39.7rem) {
+  header {
+    height: 7.5rem;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 39.7rem) {
+  ul {
+    flex-direction: column;
+  }
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 82.5rem;
 }
 
 article {
