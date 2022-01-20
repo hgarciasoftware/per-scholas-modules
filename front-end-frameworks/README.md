@@ -13,6 +13,7 @@ https://codepen.io/collection/zxKYWk
 - [hooks-effect](./hooks-effect)
 - [react-router](./react-router)
 - [react-context](./react-context)
+- [use-reducer](./use-reducer)
 
 
 ### react labs
