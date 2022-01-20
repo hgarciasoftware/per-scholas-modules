@@ -5,6 +5,7 @@ import About from './About';
 import Contact from './Contact';
 import Home from './Home';
 import Footer from './Footer';
+import Error from './Error';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
