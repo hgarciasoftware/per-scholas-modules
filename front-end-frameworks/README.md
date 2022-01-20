@@ -12,6 +12,7 @@ https://codepen.io/collection/zxKYWk
 - [forms](./forms)
 - [hooks-effect](./hooks-effect)
 - [react-router](./react-router)
+- [react-context](./react-context)
 
 
 ### react labs
@@ -21,7 +22,6 @@ https://codepen.io/collection/zxKYWk
 - [contact-list](./contact-list)
 - [tardis](./tardis)
 - [blog](./blog)
-- [starships](./starships)
 
 
 ### react homework
@@ -30,3 +30,5 @@ https://codepen.io/collection/zxKYWk
 - [korilla-receipts](./korilla-receipts)
 - [groceries](./groceries)
 - [students](./students)
+- [starships](./starships)
+- [jeopardy](./jeopardy)
