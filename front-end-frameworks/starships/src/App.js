@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import swapi from './services/sw-api';
 import Header from './components/Header';
 import Starships from './components/Starships';
 import About from './components/About';
+
+const swapiURL = 'https://swapi.dev/api';
 
 function App() {
   const [starships, setStarships] = useState([]);
 
   useEffect(() => {
-    swapi.getAllStarships(setStarships);
+    fetch(swapiURL + '/starships')
+      .then(res => res.json())
+      .then(data => setStarships(data.results));
   }, []);
 
   return (
