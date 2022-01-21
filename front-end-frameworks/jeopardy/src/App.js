@@ -30,9 +30,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This Is Jeopardy!</h1>
+      <h1 className="text-center">This Is Jeopardy!</h1>
       <Score />
-      <button onClick={getClue}>Get a new clue</button>
+      <div className="text-center">
+        <button className="mt" onClick={getClue}>Get a new clue</button>
+      </div>
       {(currentClue ?? null) ? <Clue clue={currentClue} /> : null}
     </div>
   );

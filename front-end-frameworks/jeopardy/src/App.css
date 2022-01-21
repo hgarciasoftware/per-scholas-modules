@@ -3,11 +3,50 @@ body {
   color: #fdfffd;
 }
 
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2.488rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2.074rem;
+}
+
+button {
+  height: 2.75em;
+  padding: .6875em 1.5em;
+  font-size: 1.2rem;
+  background-color: #efefef;
+  border-color: #767676;
+  border-radius: 1.5em;
+}
+
+button + button {
+  margin-left: 3.6ex;
+}
+
+table {
+  font-family: serif;
+  font-size: 1.44rem;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: .25em;
+}
+
 .App {
   margin: 0 auto;
   max-width: 33.75rem;
+  min-width: 20rem;
 }
 
-h1 {
+.mt {
+  margin-top: 2rem;
+}
+
+.text-center {
   text-align: center;
 }
