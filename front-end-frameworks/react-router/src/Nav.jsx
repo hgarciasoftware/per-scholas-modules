@@ -8,6 +8,9 @@ function Nav() {
         <Link to="about">
           <li>About Us</li>
         </Link>
+        <Link to="profile">
+          <li>Profile</li>
+        </Link>
         <Link to="contact">
           <li>Contact Us</li>
         </Link>

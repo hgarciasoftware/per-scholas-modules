@@ -6,6 +6,7 @@ import Contact from './Contact';
 import Home from './Home';
 import Footer from './Footer';
 import Error from './Error';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/profile/:user" element={<Profile />} />
         </Routes>
         <Footer />
       </div>
