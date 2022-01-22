@@ -14,6 +14,7 @@ https://codepen.io/collection/zxKYWk
 - [react-router](./react-router)
 - [react-context](./react-context)
 - [use-reducer](./use-reducer)
+- [redux](./redux)
 
 
 ### react labs
