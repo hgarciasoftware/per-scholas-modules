@@ -1,39 +1,11 @@
-import { Component } from 'react';
-
-class DivThree extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      tardis: props.tardis
-    };
-  }
-
-  changeIt(text) {
-    if (this.state.tardis.caps) {
-      this.setState({
-        tardis: {
-          name: text.toLowerCase(),
-          caps: false
-        }
-      });
-    } else {
-      this.setState({
-        tardis: {
-          name: text.toUpperCase(),
-          caps: true
-        }
-      });
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <h3 onClick={() => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>
-      </div>
-    );
-  }
+function DivThree(props) {
+  return (
+    <div>
+      Div Three
+      <h3>{props.user.loggedIn ? `Weclome ${props.user.name}!` : ''}</h3>
+      <button onClick={() => props.logUser()}>{props.user.loggedIn ? 'Log Out' : 'Log In'}</button>
+    </div>
+  );
 }
 
 export default DivThree;
