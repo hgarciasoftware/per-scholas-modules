@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import DivOne from './components/DivOne';
+
+export const UserContext = React.createContext();
 
 function App() {
 
@@ -21,10 +23,10 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <UserContext.Provider value={{ user, logUser }}>
       App
-      <DivOne logUser={logUser} user={user} />
-    </div>
+      <DivOne />
+    </UserContext.Provider>
   );
 }
 

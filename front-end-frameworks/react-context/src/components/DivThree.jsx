@@ -1,9 +1,14 @@
-function DivThree(props) {
+import { useContext } from 'react';
+import { UserContext } from '../App';
+
+function DivThree() {
+  const context = useContext(UserContext);
+
   return (
     <div>
       Div Three
-      <h3>{props.user.loggedIn ? `Weclome ${props.user.name}!` : ''}</h3>
-      <button onClick={() => props.logUser()}>{props.user.loggedIn ? 'Log Out' : 'Log In'}</button>
+      <h3>{context.user.loggedIn ? `Weclome ${context.user.name}!` : ''}</h3>
+      <button onClick={() => context.logUser()}>{context.user.loggedIn ? 'Log Out' : 'Log In'}</button>
     </div>
   );
 }

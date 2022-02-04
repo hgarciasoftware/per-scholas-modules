@@ -1,10 +1,10 @@
 import DivTwo from './DivTwo';
 
-function DivOne(props) {
+function DivOne() {
   return (
     <div>
       DivOne
-      <DivTwo logUser={props.logUser} user={props.user} />
+      <DivTwo />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import DivThree from './DivThree';
 
-function DivTwo(props) {
+function DivTwo() {
   return (
     <div>
       Div Two
-      <DivThree logUser={props.logUser} user={props.user} />
-      <DivThree logUser={props.logUser} user={props.user} />
+      <DivThree />
+      <DivThree />
     </div>
   )
 }
