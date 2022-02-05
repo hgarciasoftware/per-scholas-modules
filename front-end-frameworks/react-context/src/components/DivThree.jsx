@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { UserContext } from '../App';
+import UserContext from '../context/user-context';
 
 function DivThree() {
   const context = useContext(UserContext);
