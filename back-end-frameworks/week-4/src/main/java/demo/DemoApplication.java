@@ -15,5 +15,9 @@ public class DemoApplication {
 
     p1.show();
     p1.showWeather();
+
+    Person p2 = Context.getBean(Person.class);
+
+    System.out.println("\n  Person is a" + (p1 == p2 ? " singleton" : " prototype") + "-scoped bean");
   }
 }
