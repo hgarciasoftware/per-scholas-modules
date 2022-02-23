@@ -12,6 +12,8 @@ public class DemoApplication {
     System.out.println("Spring Boot app running ...");
 
     Person p1 = Context.getBean(Person.class);
+
     p1.show();
+    p1.showWeather();
   }
 }
