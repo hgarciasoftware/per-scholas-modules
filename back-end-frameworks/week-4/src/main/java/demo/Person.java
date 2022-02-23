@@ -8,6 +8,16 @@ public class Person {
   @Autowired
   private Address address;
 
+  @Autowired
+  public void setAddress(Address address) {
+    this.address = address;
+  }
+
+  @Autowired
+  public Person(Address address) {
+    this.address = address;
+  }
+
   public void show() {
     System.out.println("\n  called Person's show instance method");
   }
